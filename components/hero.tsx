@@ -11,7 +11,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/)' }}
+        style={{ backgroundImage: 'url()' }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-primary/85" aria-hidden />
