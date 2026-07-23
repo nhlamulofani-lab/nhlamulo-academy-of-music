@@ -54,7 +54,7 @@ export function Navbar() {
             <>
               <Button render={<Link href="/dashboard" />} variant="ghost" size="sm">
                 <LayoutDashboard className="size-4" />
-                Dashboard
+                Dashboard UPDATED
               </Button>
               <Button variant="outline" size="sm" onClick={logout}>
                 <LogOut className="size-4" />
