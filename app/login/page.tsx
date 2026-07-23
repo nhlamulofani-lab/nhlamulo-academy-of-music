@@ -1,0 +1,69 @@
+'use client'
+
+import { useState, type FormEvent } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { Music2, LogIn } from 'lucide-react'
+import { toast } from 'sonner'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { useAuth } from '@/components/auth-provider'
+
+export default function LoginPage() {
+  const router = useRouter()
+  const { login } = useAuth()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault()
+    setError('')
+    const result = login(email, password)
+    if (!result.ok) return setError(result.error || 'Something went wrong.')
+    toast.success('Welcome back!')
+    router.push('/dashboard')
+  }
+
+  return (
+    <div className="flex min-h-[calc(100dvh-4rem)] items-center justify-center bg-secondary/40 px-4 py-16">
+      <div className="w-full max-w-md rounded-2xl border border-border bg-card p-8 shadow-sm">
+        <div className="flex flex-col items-center text-center">
+          <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <Music2 className="size-6" />
+          </span>
+          <h1 className="mt-4 font-serif text-2xl font-bold text-foreground">Student Login</h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Welcome back. Log in to continue learning.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Your password" autoComplete="current-password" />
+          </div>
+
+          {error && <p className="text-sm text-destructive">{error}</p>}
+
+          <Button type="submit" size="lg" className="mt-2">
+            <LogIn className="size-4" />
+            Log In
+          </Button>
+        </form>
+
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          New student?{' '}
+          <Link href="/signup" className="font-medium text-primary hover:underline">
+            Create an account
+          </Link>
+        </p>
+      </div>
+    </div>
+  )
+}
