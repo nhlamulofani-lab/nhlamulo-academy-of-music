@@ -1,33 +1,43 @@
-# nhlamulo-academy-of-music
+# Nhlamulo Academy of Music
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+![Project Preview](./public/images/preview.png)
 
-## Built with v0
+## Project Overview
+Nhlamulo Academy of Music is a comprehensive online platform designed to provide professional music education for students ranging from absolute beginners to advanced learners. The platform offers a structured curriculum across various musical instruments and music theory, founded by **Nhlamulo Fani Sibuyi**.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## Live Site
+You can visit the live application here: [https://nhlamulo-academy-of-music.vercel.app/](https://nhlamulo-academy-of-music.vercel.app/)
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_7AM8gzczTo9k9tvfiXo89ZRtN2Lp)
+## Key Features
+- **Structured Lessons**: Step-by-step curriculum for various instruments.
+- **Music Theory**: In-depth theoretical knowledge to complement practical skills.
+- **Interactive Learning**: Integrated quizzes and progress tracking.
+- **Personal Coaching**: Direct access to the founder for advanced guidance.
+- **Responsive Design**: Optimized for a seamless experience across all devices.
+
+## Tech Stack
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+## Development
+This project was initially bootstrapped with [v0](https://v0.app) and is continuously improved through collaborative development.
