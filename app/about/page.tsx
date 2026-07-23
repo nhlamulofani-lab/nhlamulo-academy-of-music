@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-border shadow-lg">
             <Image
-              src="/images/founder.png"
+              src="/images/Artist.jpg"
               alt={`${site.founder}, founder and instructor at Nhlamulo Academy of Music`}
               width={640}
               height={720}
